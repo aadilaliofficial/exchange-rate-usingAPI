@@ -1,0 +1,131 @@
+
+      /* Add the video as background */
+      .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      :root {
+        --primary-color: #04b38d;
+        --accent-color: #ff6f61;
+        --background-color: #f0f4f8;
+        --card-background: rgba(46, 45, 45, 0.8); /* Semi-transparent background */
+        --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--background-color);
+        font-family: var(--font-family);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+        color: #fffefe; /* Change body text to white */
+      }
+
+      h1 {
+        color: var(--primary-color);
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      .container {
+        background: var(--card-background);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        z-index: 1;
+        backdrop-filter: blur(1px); /* Add backdrop filter for frosted glass effect */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Add subtle border */
+      }
+
+      .currency {
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .currency select,
+      .currency input {
+        padding: 12px 20px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 1.1rem;
+        background: #fafafa;
+        width: 45%;
+        transition: all 0.3s ease;
+      }
+
+      .currency select:focus,
+      .currency input:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        background: #fff;
+      }
+
+      .money-img {
+        width: 100px;
+        margin-bottom: 20px;
+      }
+
+      .swap-rate-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .rate {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        margin-left: 10px;
+      }
+
+      .btn {
+        background: var(--primary-color);
+        color: white;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: var(--accent-color);
+      }
+
+      @media (max-width: 600px) {
+        .currency input {
+          width: 45%;
+        }
+        .currency select {
+          width: 45%;
+        }
+      }
